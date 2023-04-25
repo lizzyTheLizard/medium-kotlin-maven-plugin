@@ -78,13 +78,13 @@
                     <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
                     <projectsDirectory>src/it</projectsDirectory>
                     <postBuildHookScript>verify</postBuildHookScript>
-                    <javaHome>C:\Users\matth\.jdks\openjdk-19.0.2</javaHome>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>run</goal>
                         </goals>
+                        <!-- Needed so tests are only run after installing the new version to the maven cache-->
                         <phase>install</phase>
                     </execution>
                 </executions>
